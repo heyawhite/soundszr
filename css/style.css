@@ -200,9 +200,9 @@ body { background-color: #636363; font-family: "Montserrat", sans-serif; font-we
 
 h1, h2, h3, h4, h5 { color: #ed2024; line-height: 1.3em; font-weight: 700; }
 
-p { color: #636363; font-size: 1.1em; }
+p { color: #636363; font-size: 1.1em; margin-bottom: 0.5em; }
 
-button { color: #fff; background-color: #ed2024; padding: 10px 14px; }
+button { color: #fff; background-color: #ed2024; padding: 10px 14px; border: 1px solid #ed2024; }
 
 h1 { font-size: 2.5em; }
 
@@ -242,6 +242,8 @@ header .fa { float: left; }
 .szrblock article { float: left; padding: 16px; width: 70%; }
 
 .message { background: #fff; color: #636363; width: 90%; margin: 0 auto 2em; clear: both; padding: 16px; }
+
+.message h3 { margin-bottom: 0.5em; }
 
 .message p { font-size: 2em; }
 
