@@ -1,0 +1,86 @@
+/* ==== BASE ============================================================================================= */
+	html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outline:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+	
+	* {-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+	.cf:before, .cf:after, .clearfix:before, .clearfix:after {content:""; display:table;}
+	.cf:after, .clear, .clearfix:after {clear:both;}
+	.cf, .clearfix {*zoom:1;}
+	html, body, #outerwrapper {width: 100%; height: 100%;}
+	body {color: #1b1b1b; background-color: #fff; font-size: 100%;}
+	ul {list-style-type: none; padding-left: 0; margin: 0;}
+	a, a:link, a:visited {text-decoration: none; color: $red; outline: 0;}
+	input:focus {outline: 0;}
+	img {display: block;}
+	.hidden {display: none !important;}
+	.entry-content li {margin-bottom: 1em;}
+	.notouch {display: none;}
+	.touch-only {display: none;}
+	.hide {display: none;}
+	.videoplayer_container, .video_wrapper {
+		position: relative; padding-bottom: 56.25%;
+		iframe {position: absolute; top: 0; left: 0; width: 100% !important; height: 100% !important; overflow: hidden;}
+	}
+	
+/* ==== END BASE ============================================================================================= */
+
+/* ==== WORDPRESS INLINE POST BODY IMAGE ALIGNMENT ============================================================================================= */
+	img {width:100%; height:auto;}
+	img.alignleft, img.alignright, img.aligncenter {margin-bottom: 1.625em;}
+	p img, .wp-caption {margin-top: 0.4em;}
+	.wp-caption {margin: .5em 0 0 0; max-width: 100%;}
+	.wp-caption img {display: block; margin: 0; max-width: 100%; height: auto;}
+	.wp-caption .wp-caption-text, .gallery-caption {color: #333; line-height: 1.125em; font-style: italic;}
+	.wp-caption .wp-caption-txet {margin: 3px 0 15px 0; padding: 0; max-width: 96%;}
+	.wp-caption p.wp-caption-text {color: #333; line-height: 1.063em; font-style: italic;}
+	.alignleft {display: inline; float: left; margin-right: 10px;}
+	.alignright {display: inline; float: right;	margin-left: 10px;}
+	.aligncenter {clear: both; display: block; margin-left: auto; margin-right: auto;}
+/* ==== END WORDPRESS INLINE POST BODY IMAGE ALIGNMENT ============================================================================================= */
+
+body {background-color:$darkgrey; font-family: $font; font-weight: 400;}
+h1, h2, h3, h4, h5 {color:$red; line-height:1.3em; font-weight:700;}
+p {color:$darkgrey; font-size: 1.1em;}
+button {color:#fff; background-color:$red; padding:10px 14px; }
+h1 {font-size:2.5em;}
+nav {background-color:#fff; color: $darkgrey;}
+figure {background-color:#fff; color:$darkgrey}
+article {background:#fff;}
+
+#pagewrapper {width:100%; height:auto; margin:0; padding:0;}
+.wrapper {max-width: 1200px; margin:0 auto;}
+
+
+/***************** Navigation ******************/
+nav {
+	color:#fff; background-color: $red; width:300px; height:100%; display:none;
+	ul {list-style: none; margin:0; padding:0;}
+	li {margin::0; padding:10px; display:block; border-bottom: 1px solid #fff; font-size: 1.4em;}
+	a {color:#fff;}
+}
+
+/**************** Header *******************/
+header {
+	background:#fff; padding:16px; width:100%; margin-bottom: 2em;
+	figure {float:right; max-width:300px;}
+	.fa {float:left;}
+}
+
+.home {background:#fff; padding:16px;}
+
+/**************** Clip Share Page *******************/
+
+.szrblock {
+	background:#fff; color:$darkgrey; width:90%; margin:0 auto 2em; clear:both;
+	figure {float:left; width:30%;}
+	article {float:left; padding:16px; width:70%;}
+}
+
+.message {
+	background:#fff; color:$darkgrey; width:90%; margin:0 auto 2em; clear:both; padding:16px;
+	p {font-size: 2em;}
+}
+
+.buttons {
+	width:90%; margin:0 auto; clear:both;
+	button {width:48%; margin:0 1%; float:left;}
+}
