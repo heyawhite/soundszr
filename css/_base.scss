@@ -70,7 +70,7 @@ header {
 
 .home {background:#fff; padding:16px;}
 
-.page-title {padding:1em 0;}
+.page-title {padding:1em 0;padding-bottom:0;padding-top:0.75em;}
 
 /**************** Clip Share Page *******************/
 
@@ -95,31 +95,34 @@ header {
 .field {margin:0.5em 0;}
 
 /**************** CLIP CUTTER ******************/
-.szr-cutter {background:#fff; color:#636363; padding:16px;}
+.szr-cutter {background:#fff; color:#636363; padding:1em;}
 .audchange {
 	width:100%; margin:2em 0;
 	aside {
 		width:18%; margin:0 1%; float:left; background:#fff; padding:16px;
 		p{
+			margin-top:0.5em;
+			font-size:1em;
 			min-height:80px;
 		}
 	}
 }
 .pullclips {
-	width:100%; display:block; margin: 1em 0;
+	width:100%; display:block; margin: 1em 0;margin-bottom:1.5m;
 	 .well {background:#ccc; padding:10px;}
 }
 
 .spec {width:100%; display:none;}
 #spectrum {display: block;}
-.editor {width:98%; float:left; margin: 0 1%; cursor: pointer;}
+.editor {width:100%; margin: 0 auto; cursor: pointer; text-align:center;}
 
-.controls {padding:20px 0;}
-.btn-group-left {display: inline-block; width:49%; text-align: right; padding-right:10px;}
-.btn-group-right {display: inline-block; width:49%; padding-left: 10px;}
-.btn-primary, .btn-success {padding:4px 8px; background:#636363; color:#fff; cursor: pointer; line-height: 1.3em;}
+.controls {padding:1em 0;}
+.btn-group-left {display: inline-block; width:47%; text-align: right; padding-right:10px; margin-top:0.5em;}
+.btn-group-right {display: inline-block; width:47%; padding-left: 2em; margin-top:0.5em;}
+.btn-primary, .btn-success {padding:4px 8px; background:#999; color:#fff; cursor: pointer; line-height: 1.3em;}
+.btn-primary:hover, .btn-success:hover { background-color:#666}
 
-.saving {width:100%;}
+.saving {width:100%;padding-bottom:1.5em;}
 
 #editor {
     width: 100%;

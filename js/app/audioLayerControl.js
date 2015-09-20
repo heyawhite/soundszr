@@ -459,6 +459,7 @@ function audioLayerControl(elementContext)
         {
             $('#app-progress')[0].style['width'] = '50%';
             activeAudioLayerControl = this.eventHost.elementContext;
+            console.log(this.resultArrayBuffer);
             this.eventHost.audioPlayback.audioContext.decodeAudioData(this.resultArrayBuffer, this.eventHost.decodeAudioFinished, this.eventHost.decodeAudioFailed);  
         }
         
