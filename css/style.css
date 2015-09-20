@@ -220,7 +220,7 @@ article { background: #fff; }
 
 .opennav { left: 210px; }
 
-.content { padding: 16px; }
+.content { padding: 16px; background: #fff; }
 
 /***************** Navigation ******************/
 nav { color: #fff; background-color: #ed2024; width: 210px; height: 100%; position: fixed; z-index: 999; display: none; }
