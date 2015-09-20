@@ -47,6 +47,43 @@ function FileDropbox()
     function handleFiles(files, masterObj)
     {
         // handle only the first file (no multifile support) 
+        //var file = files[0];
+        // create the reader to access the local file (note: browser have different security restrictions) 
+        /*var reader = new FileReader();
+        
+        // init the reader event handlers
+        reader.onload = function (evt)
+        {
+            var arrayBuffer = evt.target.result;
+            
+            masterObj.resultArrayBuffer = arrayBuffer;
+            // write into the result array
+            masterObj.result = new Uint8Array(arrayBuffer);
+            
+            // callback
+            if (masterObj.onFinish !== null)
+            {
+                masterObj.onFinish();
+            }
+        }; // event handle on success
+        
+        reader.onerror = masterObj.onFail; // event handle on failure
+        
+        var blob = null;
+        var xhr = new XMLHttpRequest(); 
+        xhr.open("GET", "https://soundcloud.com/johnlegend/you-and-i-benny-cassette-remix"); 
+        xhr.responseType = "arraybuffer";//force the HTTP response, response-type header to be blob
+        xhr.onload = function() 
+        {
+            blob = this.response;//xhr.response is now a blob object
+            console.log(blob);
+            reader.readAsArrayBuffer(blob);
+        }
+        xhr.send();
+        // load the file as array buffer
+        //var file = new File("./asset/test.mp3","test.mp3");*/
+
+         // handle only the first file (no multifile support) 
         var file = files[0];
         // create the reader to access the local file (note: browser have different security restrictions) 
         var reader = new FileReader();
@@ -71,6 +108,7 @@ function FileDropbox()
         
         // load the file as array buffer
         reader.readAsArrayBuffer(file);
+       
     }
     
     
