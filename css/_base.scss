@@ -51,6 +51,7 @@ article {background:#fff;}
 .active {display:block !important;}
 .opennav {left:210px;}
 .content {padding:16px; background:#fff;}
+
 /***************** Navigation ******************/
 nav {
 	color:#fff; background-color: $red; width:210px; height:100%; position: fixed; z-index: 999; display:none;
@@ -68,6 +69,8 @@ header {
 }
 
 .home {background:#fff; padding:16px;}
+
+.page-title {padding:1em 0;}
 
 /**************** Clip Share Page *******************/
 
