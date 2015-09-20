@@ -243,7 +243,7 @@ header .fa { color: #636363; font-size: 3em; }
 /**************** Clip Share Page *******************/
 .szrblock { background: #fff; color: #636363; margin: 0 auto 2em; clear: both; }
 
-.szrblock img { float: left; width: 30%; }
+.szrblock figure { float: left; width: 30%; }
 
 .szrblock article { float: left; padding: 16px; width: 70%; }
 
