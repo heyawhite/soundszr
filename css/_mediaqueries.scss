@@ -17,9 +17,9 @@
 ************************************************/
 @media screen and (max-width: $tab-max) {
 	.btn-group-left {display: block; width:100%; padding:10px; text-align: center;}
-.btn-group-right {display: block; width:100%; padding:10px; text-align: center;}
+	.btn-group-right {display: block; width:100%; padding:10px; text-align: center;}
 	#audchange {
-		aside {width:100%; margin-bottom: 1.5em;}
+		aside {width:96%; margin:0 2% 3%; padding:16px;}
 	}
 }
 
