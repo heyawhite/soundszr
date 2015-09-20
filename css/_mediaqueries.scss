@@ -4,11 +4,13 @@
 ************************************************/
 @media screen and (max-width: 1200px) {
 	.wrapper {padding:0 10px;}
-
 }
 
-@media screen and (max-width: 1020px) {
-		
+@media screen and (max-width: 760px) {
+
+	#audchange {
+		aside {width:96%; margin:0 2% 3%; padding:16px;}
+	}
 }
 
 
@@ -18,9 +20,6 @@
 @media screen and (max-width: $tab-max) {
 	.btn-group-left {display: block; width:100%; padding:10px; text-align: center;}
 	.btn-group-right {display: block; width:100%; padding:10px; text-align: center;}
-	#audchange {
-		aside {width:96%; margin:0 2% 3%; padding:16px;}
-	}
 }
 
 /***********************************************
