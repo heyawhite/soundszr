@@ -232,7 +232,7 @@ nav a { color: #fff !important; }
 /**************** Header *******************/
 header { background: #fff; padding: 16px; width: 100%; margin-bottom: 2em; }
 
-header figure { float: right; max-width: 300px; }
+header figure { float: right; max-width: 220px; }
 
 header #openmenu { float: left; padding: 10px; }
 
@@ -241,13 +241,13 @@ header .fa { color: #636363; font-size: 3em; }
 .home { background: #fff; padding: 16px; }
 
 /**************** Clip Share Page *******************/
-.szrblock { background: #fff; color: #636363; width: 90%; margin: 0 auto 2em; clear: both; }
+.szrblock { background: #fff; color: #636363; margin: 0 auto 2em; clear: both; }
 
-.szrblock figure { float: left; width: 30%; }
+.szrblock img { float: left; width: 30%; }
 
 .szrblock article { float: left; padding: 16px; width: 70%; }
 
-.message { background: #fff; color: #636363; width: 90%; margin: 0 auto 2em; clear: both; padding: 16px; }
+.message { background: #fff; color: #636363; margin: 0 auto 2em; clear: both; padding: 16px; }
 
 .message h3 { margin-bottom: 0.5em; }
 
