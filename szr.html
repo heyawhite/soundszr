@@ -8,6 +8,7 @@
   <meta name="author" content="Team 12">
 
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/app.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -17,7 +18,7 @@
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
-<body>
+<body onload="onDocumentLoaded()">
 	<nav id="leftnav">
 		<ul>
 			<li><a href="index.html">Home</a></li>
@@ -37,20 +38,190 @@
 			</div>
 		</header>
 		
-		<div class="wrapper">
-			<section class="message">
-				<h3>Create a szr</h3>
-				
-			</section>
-		
-			<div class="buttons">
-				<a href="#"><button class="full red">Full Episode</button></a>
-				<a href="#"><button class="share red">Share <i class="fa fa-facebook-official"></i></button></a>
-				<div class="clear"></div>
-			</div>
-		</div>
-		
+		<div class="wrapper page-content szr-cutter">
+	
+	      <div class="controls">
+
+		          
+	            <div class="btn-group-left">
+	              <a class="btn btn-primary" onclick="$('#audioLayerControl')[0].copy();"><i class="icon-share icon-white"></i> Copy</a>
+	              <a class="btn btn-primary" onclick="$('#audioLayerControl')[0].paste();"><i class="icon-chevron-down icon-white"></i> Paste</a>
+	              <a class="btn btn-primary" onclick="$('#audioLayerControl')[0].cut();"><i class="icon-chevron-up icon-white"></i> Cut</a>
+	              <a class="btn btn-primary" onclick="$('#audioLayerControl')[0].crop();"><i class="icon-retweet icon-white"></i> Crop</a>
+	              <a class="btn btn-primary" onclick="$('#audioLayerControl')[0].del();"><i class="icon-remove icon-white"></i> Delete</a>
+	            </div>
+	            
+	            <div class="btn-group-right">
+	              <a class="btn btn-success" onclick="$('#audioLayerControl')[0].selectAll();"><i class="icon-resize-horizontal icon-white"></i> Select All</a>
+	              <a class="btn btn-success" onclick="$('#audioLayerControl')[0].zoomIntoSelection();"><i class="icon-plus-sign icon-white"></i> Zoom To Selection</a>
+	              <a class="btn btn-success" onclick="$('#audioLayerControl')[0].zoomToFit();"><i class="icon-fullscreen icon-white"></i> Zoom To Fit</a>
+	            </div>
+	            
+	      </div><!-- end controls -->
+
+	      
+	      
+	      <section class="pullclips">
+	        <div class="spec">
+	          <h3>Spectrum</h3>
+	          <div class="well">
+	            <div id="spectrum"></div>
+	          </div>
+	        </div>
+	        <div class="editor">
+	          <h3>Editor</h3>
+	             <audioLayerControl id="audioLayerControl" title="CloudCompany.mp3" />
+	          <!--<div id="editor">
+	                <div id="editorbox">
+	                    <audioLayerControl id="audioLayerControl" title="CloudCompany.mp3" />
+	                </div>
+	            </div>-->
+	        </div>
+			<div class="clear"></div>
+	      </section>
+	      <hr>
+	      
+	      
+	      <section class="saving">
+              <div class="btn-group-left">
+                <a id="btn_play" class="btn btn-success btn-large" onclick="$('#audioLayerControl')[0].play()" rel="tooltip" title="first tooltip"><i class="fa fa-play"></i></a>
+                <a id="btn_pause" class="btn btn-success btn-large disabled"><i class="fa fa-pause"></i></a>
+                <a id="btn_stop" class="btn btn-success btn-large" onclick="$('#audioLayerControl')[0].stop()"><i class="fa fa-stop"></i></a>
+                <a id="btn_loop" class="btn btn-warning btn-large" data-toggle="button" onclick="$('#audioLayerControl')[0].toggleLoop();"><i class="icon-repeat icon-white"></i></a>
+              </div>
+              
+              <div class="btn-group-right">
+                <a class="btn btn-large btn-primary" onclick="$('#audioLayerControl')[0].save($('#savelink')[0]);"><i class="fa fa-fire"></i> Render</a>
+                <a class="btn btn-large btn-success disabled" id="savelink" download="export.wav"><i class="fa fa-download"></i> Save</a>
+              </div>
+	      </section>
+	      
+	      
+	      <div class="row">
+	        <div class="span4 offset4">
+	          <div class="progress progress-striped active">
+	            <div id="app-progress" class="bar" style="width: 0%;"></div>
+	          </div>
+	        </div>
+	      </div>  
+	      <br>
+	      
+	    </div><!-- end page content -->	 
+	      
+	      <div class="audchange">
+		      <aside>
+	         	 <h3>Gain</h3>
+	          
+	            <p>Change the volume of the selected audio sequence with the given gain multiplicator.</p>
+	            
+	              <div class="pull-right">
+	                <div class="btn-group" >
+	                  
+	                    <button onclick="decrease_db()"><i class="fa fa-minus-circle"></i></button>
+	                    <button id="gain-db" class="btn disabled" onclick="gain_btn_clicked()">0 db</button>
+	                    <button onclick="increase_db()"><i class="fa fa-plus-circle"></i></button> 
+	                    <div class="clear"></div>
+	                </div>
+	              </div>
+	            <script type="text/javascript">
+	                var db_gain = 0;
+	
+	                function decrease_db() {
+	                  --db_gain;
+	                  update_db_gain_btn();
+	                }
+	
+	                function increase_db(){
+	                  ++db_gain;
+	                  update_db_gain_btn();
+	                }
+	
+	                function update_db_gain_btn() {
+	                  var gain_btn = $('#gain-db')[0];
+	
+	                  gain_btn.innerHTML = db_gain + ' db'; 
+	
+	                  if (db_gain === 0) {
+	                    gain_btn.className = 'btn disabled';
+	                  }
+	                  else {
+	                    gain_btn.className = 'btn btn-primary';
+	                  }
+	                }
+	
+	                function gain_btn_clicked() {
+	                  $('#audioLayerControl')[0].filterGain(db_gain);
+	                  db_gain = 0;
+	                  update_db_gain_btn();
+	                }
+	                </script>
+	          </aside>
+	        
+	        <aside>
+	          <h3>Normalize</h3>
+	            <p>Adjust the volume to the maximum of the selected audio sequence.</p>
+	            <a onclick="$('#audioLayerControl')[0].filterNormalize();"><button>Apply</button></a>
+	        </aside>
+	        
+	        <aside>
+	          <h3>Silence</h3>
+	            <p>Silence the selected audio sequence</p>
+	            <a onclick="$('#audioLayerControl')[0].filterSilence();"><button>Apply</button></a>
+	        </aside>
+	        
+	        
+			<aside>
+		          <h3>Fade In</h3>
+	            <p>Create a linear fade int of the selected audio sequence</p>
+	            <a onclick="$('#audioLayerControl')[0].filterFadeIn();"><button>Apply</button></a>
+	        </aside>
+	        
+	        <aside>
+	          <h3>Fade Out</h3>
+	            <p>Create a linear fade out of the selected audio sequence</p>
+	            <a onclick="$('#audioLayerControl')[0].filterFadeOut();"><button>Apply</button></a>
+	        </aside>
+	        <div class="clear"></div>
+	    </div><!--end buttons -->	
 			
 	</div><!-- end pagewrapper -->
 </body>
+</html>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/bootstrap/bootstrap-transition.js"></script>
+    <script src="js/bootstrap/bootstrap-alert.js"></script>
+    <script src="js/bootstrap/bootstrap-dropdown.js"></script>
+    <script src="js/bootstrap/bootstrap-scrollspy.js"></script>
+    <script src="js/bootstrap/bootstrap-tab.js"></script>
+    <script src="js/bootstrap/bootstrap-tooltip.js"></script>
+    <script src="js/bootstrap/bootstrap-popover.js"></script>
+    <script src="js/bootstrap/bootstrap-button.js"></script>
+    <script src="js/bootstrap/bootstrap-collapse.js"></script>
+    <script src="js/bootstrap/bootstrap-carousel.js"></script>
+    <script src="js/bootstrap/bootstrap-typeahead.js"></script>
+
+    <script type="text/javascript" src="js/app/ACFIRFilter.js"></script>
+    <script type="text/javascript" src="js/app/ACAAFilter.js"></script> 
+    <script type="text/javascript" src="js/app/ACSpectrum.js"></script>    
+    <script type="text/javascript" src="js/app/ACFFT.js"></script>
+    <script type="text/javascript" src="js/app/SpectrumWorker.js"></script>
+    <script type="text/javascript" src="js/app/SpectrumDisplay.js"></script>
+    <script type="text/javascript" src="js/app/audioplayback.js"></script>
+    <script type="text/javascript" src="js/app/filedropbox.js"></script>
+    <script type="text/javascript" src="js/app/fft.js"></script>
+    <script type="text/javascript" src="js/app/audioLayerControl.js"></script>
+    <script type="text/javascript" src="js/app/audiosequence.js"></script>
+    <script type="text/javascript" src="js/app/AudioSequenceEditor.js"></script>
+    <script type="text/javascript" src="js/app/mathutilities.js"></script>
+    <script type="text/javascript" src="js/app/wavetrack.js"></script>
+    <script type="text/javascript" src="js/app/binarytoolkit.js"></script>
+    <script type="text/javascript" src="js/app/filesystemutility.js"></script>
+    <script type="text/javascript" src="js/app/recorder.js"></script>
+    <script type="text/javascript" src="js/app/recorderWorker.js"></script>
+    <script type="text/javascript" src="js/app/editorapp.js"></script>
+    
+  </body>
 </html>
