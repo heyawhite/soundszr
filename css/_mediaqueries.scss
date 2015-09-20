@@ -8,172 +8,21 @@
 }
 
 @media screen and (max-width: 1020px) {
-	#topnav {
-		.menu-header-navigation-container li {padding:20px 8px 6px 8px; font-size:1em;}
-	}
-	#home {
-		section {
-			h1 {font-size:4em;}
-			h2 {font-size:2em}
-		}
-	}
-
-	.fullpost {
-		article { margin:3%; width:45%;
-			h2 {font-size:2em;}
-			p {font-size:1em}
-		} 
-	}
-	
+		
 }
 
-@media screen and (max-width: 870px) {
-	#topnav {
-		.sitelogo {width:30%;}
-		.menu-header-navigation-container {width:68%; margin-left:2%;}
-	}
-	.fullpost {
-		article {
-			h2 {font-size:1.8em;}
-		} 
-	}
-	#featuredhead, #bloghead {
-		section {
-			h1 {font-size:4.2em;}
-			h2 {color:#fff; font-size:2.3em;}
-		}
-	}
-}
-
-@media screen and (max-width: 800px) {
-	.no-touch {display:none;}
-	.touch-only {display: block;}
-
-	#topnav { padding:0;
-		.menutoggle {
-			width:22%; margin-right:3%; margin-bottom:1%; float:left; text-align:center; color:#fff; padding:2%; background:$blue; font-size:1.5em;
-			-webkit-transition:margin-top 0.3s; -moz-transition:margin-top 0.3s; -ms-transition:margin-top 0.3s; -o-transition:margin-top 0.3s; transition:margin-top 0.3s;
-		}
-		.menu-header-navigation-container {display:none;}
-		.sitelogo {width:75%; float:right; max-width: 200px; padding:6px;
-			img {float:right;}
-		}
-	}
-	.background {
-		box-shadow: 0; 
-		.menutoggle {margin-top:3%;}
-	}
-	.fullpost {
-		article { margin:2%; width:62%;} 
-	}
-	#featuredproject {
-		.featuresquare .overlay {
-			h3 {margin-top:0.1em;}
-			p {font-size:0.9em;}
-		} 
-	}
-	#allprojects .featuresquare {
-		width:50%; 
-		.overlay {
-			h3 {margin-top:10px;}
-			p {display:block;}
-		}
-	}
-
-}
-
-@media screen and (max-width: 720px) {
-	.fullpost {
-		article {  width:90%;} 
-	}
-	#featuredproject {
-		.featuresquare .overlay {
-			p {margin:0.4em auto;}
-			.blackbutton {padding:8px; font-size:0.8em;}
-		} 
-	}
-
-}
 
 /************************************************
 ********************* TABLET *******************
 ************************************************/
 @media screen and (max-width: $tab-max) {
-	#home {
-		section {
-			h1 {font-size:3.5em;}
-			h2 {font-size:1.8em}
-			button {width:80%; margin-top:1.4em}
-		}
-	}
-	#topnav {padding:12px 10px 20px 10px;}
-	#innerpage {padding:0;}
-	#featuredhead, #bloghead {
-		section {margin:20% 0 15%;}
-		section h1 {font-size:3em;}
-		section h2 {font-size:1.8em;}
-	}
-	#homecenter article, #attorneyscallout article {width:100%;}
-	#attorneylist .attorneyitem, .practices #practicelist li {font-size: 1.2em;}
-	.staff { 
-		article {float:left; width:100%;}
-		aside {float: right; width:100%; margin-left: 0;}
-	}
+
 }
 
 /***********************************************
 **************** SMALL TABLET *****************
 ************************************************/
 @media screen and (max-width: $tab-med) {
-	#mobtext {display:none;}
-	#logos img {max-width:50%;}
-	#home {
-		section { margin:20% 0 14% 0;
-			h1 {font-size:2.8em;}
-			h2 {font-size:1.6em}
-		}
-	}
-	#specialties {
-		figure { width:50%; padding:2% 4%;
-			a {padding:30px;}
-			h3 {font-size:1.8em; }
-		}
-		 a {margin:1em 0 1.2em 0;}
-	}
-	.fullpost {
-		article { width:86%;
-			h2 {margin-bottom:0.6em; word-wrap: break-word;}
-			p {display:none;}
-		} 
-	}
-	
-	#blog {
-		#content {
-			article {
-				margin:0 auto 20px auto; max-width:1000px; padding:10px;
-				aside {
-					width:100%;
-					.month, .day {display:none;}
-					.mobiledate {display:block; text-align:left; font-size:2.8em; line-height:1.5em;}
-				}
-				div {
-					width:100%; margin-left:0;
-					header {
-						h1 {font-size:2em;}
-					}
-					.author h3 {font-size:1.1em;}
-					.author img {max-width:50px;}
-					p {font-size:1em;}
-				}
-			}
-		}
-	}
-	p {font-size:1em;}
-	
-	.withsidebar {
-		article {width:100%;}
-		aside {float:left; width:100%; margin-left:0; margin-top:2em;}
-	}
 
 }
 
@@ -181,34 +30,6 @@
 **************** SMART PHONE *****************
 ************************************************/
 @media screen and (max-width: $mob-max) {
-	#topnav { padding:18px 10px 20px 10px;
-		.sitelogo {max-width:180px !important;}
-	}
-	#home {
-		section {
-			h1 {font-size:2.3em;}
-			h2 {font-size:1.4em}
-			button {width:90%;}
-		}
-	}
-	#featuredhead, #bloghead {
-		section {
-			h1 {font-size:2.3em;}
-			h2 {font-size:1.4em}
+	
 
-		}
-	}
-
-}
-
-@media screen and (max-width: 360px) {
-	#topnav {
-		.sitelogo img {max-width:200px;}
-	}
-
-	.services {
-		figure {
-			h2 {font-size:2em;}
-		} 
-	}
 }
