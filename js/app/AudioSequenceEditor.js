@@ -432,11 +432,11 @@ function AudioLayerSequenceEditor(elementContext)
         var oldTextAlign = canvasContext.textAlign;
         var oldBaseline = canvasContext.textBaseline;
 
-        canvasContext.font = '24px Montserrat';
+        canvasContext.font = '22px Montserrat';
         canvasContext.fillStyle = '#999';
         canvasContext.textAlign = 'center';
         canvasContext.textBaseline = "middle"
-        this.paintTextWithShadow("Drag audio file here to edit", canvasContext.canvas.clientWidth / 2.0, canvasContext.canvas.clientHeight / 2.0, "#666", canvasContext);
+        this.paintTextWithShadow("Drag audio file here to edit", canvasContext.canvas.clientWidth / 2.0, canvasContext.canvas.clientHeight / 2.0, "#333", canvasContext);
         
         canvasContext.font = oldFont;
         canvasContext.textAlign = 'left';
