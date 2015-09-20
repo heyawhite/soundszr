@@ -217,13 +217,13 @@ article { background: #fff; }
 .wrapper { max-width: 1200px; margin: 0 auto; }
 
 /***************** Navigation ******************/
-nav { color: #fff; background-color: #ed2024; width: 210px; height: 100%; display: none; position: fixed; }
+nav { color: #fff; background-color: #ed2024; width: 210px; height: 100%; position: fixed; z-index: 999; }
 
 nav ul { list-style: none; margin: 0; padding: 0; }
 
-nav li { margin: 0; padding: 10px; display: block; border-bottom: 1px solid #fff; font-size: 1.4em; }
+nav li { margin: 0; padding: 16px; display: block; border-bottom: 1px solid #fff; font-size: 2em; }
 
-nav a { color: #fff; }
+nav a { color: #fff !important; }
 
 /**************** Header *******************/
 header { background: #fff; padding: 16px; width: 100%; margin-bottom: 2em; }

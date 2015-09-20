@@ -52,10 +52,10 @@ article {background:#fff;}
 
 /***************** Navigation ******************/
 nav {
-	color:#fff; background-color: $red; width:210px; height:100%; display:none; position: fixed;
+	color:#fff; background-color: $red; width:210px; height:100%; position: fixed; z-index: 999;
 	ul {list-style: none; margin:0; padding:0;}
-	li {margin::0; padding:10px; display:block; border-bottom: 1px solid #fff; font-size: 1.4em;}
-	a {color:#fff;}
+	li {margin::0; padding:16px; display:block; border-bottom: 1px solid #fff; font-size: 2em;}
+	a {color:#fff !important;}
 }
 
 /**************** Header *******************/
