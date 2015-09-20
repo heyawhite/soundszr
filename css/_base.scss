@@ -70,7 +70,7 @@ header {
 
 .home {background:#fff; padding:16px;}
 
-.page-title {padding:1em 0;}
+.page-title {padding:1em 0;padding-bottom:0;}
 
 /**************** Clip Share Page *******************/
 
@@ -120,7 +120,7 @@ header {
 .btn-primary, .btn-success {padding:4px 8px; background:#999; color:#fff; cursor: pointer; line-height: 1.3em;}
 .btn-primary:hover, .btn-success:hover { background-color:#666}
 
-.saving {width:100%;}
+.saving {width:100%;padding-bottom:1.5em;}
 
 #editor {
     width: 100%;
