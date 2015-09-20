@@ -242,6 +242,8 @@ header .fa { color: #636363; font-size: 3em; }
 
 .home { background: #fff; padding: 16px; }
 
+.page-title { padding: 1em 0; }
+
 /**************** Clip Share Page *******************/
 .szrblock { background: #fff; color: #636363; margin: 0 auto 2em; clear: both; }
 
