@@ -212,9 +212,13 @@ figure { background-color: #fff; color: #636363; }
 
 article { background: #fff; }
 
-#pagewrapper { width: 100%; height: auto; margin: 0; padding: 0; position: relative; }
+#pagewrapper { width: 100%; height: auto; margin: 0; padding: 0; position: absolute; }
 
 .wrapper { max-width: 1200px; margin: 0 auto; }
+
+.active { display: block !important; }
+
+.opennav { left: 210px; }
 
 /***************** Navigation ******************/
 nav { color: #fff; background-color: #ed2024; width: 210px; height: 100%; position: fixed; z-index: 999; display: none; }
