@@ -118,6 +118,7 @@ header {
 .btn-group-left {display: inline-block; width:47%; text-align: right; padding-right:10px; margin-top:0.5em;}
 .btn-group-right {display: inline-block; width:47%; padding-left: 2em; margin-top:0.5em;}
 .btn-primary, .btn-success {padding:4px 8px; background:#999; color:#fff; cursor: pointer; line-height: 1.3em;}
+.btn-primary:hover, .btn-success:hover { background-color:#666}
 
 .saving {width:100%;}
 
